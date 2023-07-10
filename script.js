@@ -30,7 +30,7 @@
 //  temp = temp * a;
 // }
 
-// console.log("the power of given number is", + temp);  
+// console.log("the power of given number is", + temp);
 
 // // FIND GREATEST/MAXIMUM OF THE ELEMENTS IN ARRAY
 
@@ -108,7 +108,7 @@
 //         }
 //     }
 
-//     checkprime(2);   
+//     checkprime(2);
 
 // // odd or even
 // /* console.log("find if numb is +ve or -ve");
@@ -141,7 +141,7 @@
 //   console.log(char);
 
 // if (char === "a" || char === "e" ||char === "i" ||char === "o" ||char === "u") count++;
-// } 
+// }
 // console.log(count);
 
 //print first 10 prime numbers
@@ -261,19 +261,19 @@
 //   return -1;
 // }
 
-// ARRAY FUNCTIONS- ARRAY SLICING
-console.log("pdf method, array slicing");
-function slicearr(arr, start, end) {
-  let sliced = [];
-  for (i = start; i <= end; i++) {
-    sliced.push(arr[i]);
-  }
-  arr = sliced; // why sliced array doesnt get emptied when value is transferred to arr array
-  console.log(arr);
-  console.log(sliced);
-  return sliced;
-}
-slicearr([0, 1, 2, 3, 4, 5], 1, 4);
+// // ARRAY FUNCTIONS- ARRAY SLICING
+// console.log("pdf method, array slicing");
+// function slicearr(arr, start, end) {
+//   let sliced = [];
+//   for (i = start; i <= end; i++) {
+//     sliced.push(arr[i]);
+//   }
+//   arr = sliced; // why sliced array doesnt get emptied when value is transferred to arr array
+//   console.log(arr);
+//   console.log(sliced);
+//   return sliced;
+// }
+// slicearr([0, 1, 2, 3, 4, 5], 1, 4);
 
 // // PRINT FIRST 10 PRIME NUMBERS-- MY METHOD
 //PLEASE EXPLAIN THE FLOW OF CONTROL IN FOR LOOP INSIDE WHILE LOOP, checking
@@ -474,7 +474,6 @@ slicearr([0, 1, 2, 3, 4, 5], 1, 4);
 //   );
 // }
 // displayGrade(84.19, "B");
-
 
 // // implement the binary search algorithm to search for the target value in the given sorted array.
 // [2, 5, 8, 12, 16, 23, 38, 56, 72, 91, 92, 95, 100, 101, 108, 107, 110, 111, 113, 115, 116, 120, 121]
@@ -859,7 +858,7 @@ slicearr([0, 1, 2, 3, 4, 5], 1, 4);
 
 // STRING OPERATIONS
 
-// let arr = [];
+// let arr = 0;
 // arr = ["hello", "how", "are", "you"];
 //  console.log(arr.toString());
 
@@ -923,36 +922,35 @@ slicearr([0, 1, 2, 3, 4, 5], 1, 4);
 // }
 // console.log("the reversed array is:" +revArr);
 
-// BALANCED STRING CHECKER
+// // BALANCED STRING CHECKER
 
-console.log("BALANCED STRING CHECKER");
+// console.log("BALANCED STRING CHECKER");
 
-function balancedStringCheck(str) {
+// function balancedStringCheck(str) {
+//   // how to declare boolean // str = {([])}
+//   console.log(str.length);
+//   let result = true;
+//   let newArray = [];
 
-  // how to declare boolean // str = {([])}
-  console.log(str.length);
-  let result = true;
-let newArray = [];
+//   for (i = 0; i < str.length; i++) {
+//     newArray.push(str[i]);
+//   }
+//   console.log(newArray);
 
-  for(i=0; i<str.length; i++){
-    newArray.push(str[i]);
-  }
-  console.log(newArray);
+//   for (i = 0; i <= newArray.length / 2; i++) {
+//     console.log(newArray[i], newArray[newArray.length - i - 1]);
+//     if (newArray[i] !== newArray[newArray.length - i - 1]) {
+//       result = false;
+//     }
+//   }
 
-  for (i = 0; i <= newArray.length / 2; i++) {
-    console.log(newArray[i], newArray[newArray.length - i - 1])
-    if (newArray[i] !== newArray[newArray.length - i - 1]) {
-      result = false;
-    }
-    }
-
-  if (result) {
-    console.log("the given string is a balanced string");
-  } else {
-    console.log("the given string is not a balanced string");
-  }
-}
-balancedStringCheck("{([])}");
+//   if (result) {
+//     console.log("the given string is a balanced string");
+//   } else {
+//     console.log("the given string is not a balanced string");
+//   }
+// }
+// balancedStringCheck("{([])}");
 
 // // Largest Subarray with Equal Number of Zeros and Ones
 // console.log("Largest Subarray with Equal Number of Zeros and Ones");
@@ -1028,7 +1026,7 @@ balancedStringCheck("{([])}");
 // for(i=0; i<arr.length; i++) {
 //   if(arr[i] === 0){
 //     arr[i] = "";
-    
+
 //   }
 // }
 // console.log("newarr is " +newarr);
@@ -1053,7 +1051,7 @@ balancedStringCheck("{([])}");
 // convert number to a string
 
 // console.log("converting numbers into string");
-// let num = 572845;  
+// let num = 572845;
 // let str = [];
 
 // while(num!==0){
@@ -1082,7 +1080,6 @@ balancedStringCheck("{([])}");
 // }
 // console.log("the reversed number is: "+revNum);
 
-
 // // Insertion sort
 
 // function inertionSort(arr) {
@@ -1093,9 +1090,9 @@ balancedStringCheck("{([])}");
 //         arr[j] = arr[j-1]
 //         arr[j-1] = temp
 //         console.log(arr[j],arr[j-1]);
-//         // [arr[j],arr[j-1]] = [arr[j-1],arr[j]] 
+//         // [arr[j],arr[j-1]] = [arr[j-1],arr[j]]
 //       }
-     
+
 //     }
 //   }
 //   console.log(arr)
@@ -1106,47 +1103,665 @@ balancedStringCheck("{([])}");
 // let num = 5.9274850;
 // console.log(num.toPrecision(5));
 
-// MERGE SORT
+// //SUM OF DIGITS- RECURSIVE FUNCTION
+// console.log("sum using recursive function")
 
-function merge(leftArray,rightArray) {
-  const output = [];
-  let leftIndex = 0, rightIndex = 0;
+// function sumOfDigits(n) {aAaAS
+// if (n < 10) {
+// return n;
+// } else {
+//     console.log(n)
+// return n % 10 + sumOfDigits(Math.floor(n / 10));
+// }
+// }
+// console.log(sumOfDigits(935));
 
-  while(leftIndex<leftArray.length && rightIndex<rightArray.length) {
-    const leftEl = leftArray[leftIndex];
-    const rightEl = rightArray[rightIndex];
+// FACTORIAL OF GIVEN NUMBER- RECURSIVE FUNCTION
+console.log("FACTORIAL OF GIVEN NUMBER");
 
-    if(leftEl<rightEl){
-      output.push(leftEl);
-      leftIndex++
-    }
-    else{
-      output.push(rightEl);
-      rightIndex++
-    }
+function factorial(num) {
+  if (num === 0) {
+    return 1;
+  } else {
+    return factorial(num - 1) * num;
   }
-  return [...output,...leftArray.slice(leftIndex), rightArray.slice(rightIndex)];
+}
+console.log(factorial(4));
+
+//STRING REVERSE- RECURSIVE FUNCTION
+console.log("STRING REVERSE- RECURSIVE FUNCTION");
+
+function reverseString(str) {
+  if (str.length <= 1) {
+    return str;
+  } else {
+    console.log(str.slice(1), str[0]);
+    return reverseString(str.slice(1)) + str[0];
+  }
+}
+console.log(reverseString("abcdef"));
+
+// // COUNT NUMBER OF DIGITS- RECURSIVE FUNCTION
+
+// function countDigits(n) {
+//   if (n < 10) {
+//     return 1;
+//   } else {
+//     return 1 + countDigits(Math.floor(n / 10));
+//   }
+// }
+// console.log(countDigits(7458));
+
+// // CHECK IF PALINDROME- RECURSIVE FUNCTION
+// console.log("CHECK IF PALINDROME- RECURSIVE FUNCTION");
+
+// function isPalindrome(str) {
+//   if (str.length <= 1) {
+//     return true;
+//   }
+
+//   else {
+//       if (str[0] !== str[str.length - 1]) {
+//       return false;
+//     } else {
+//         console.log(str.slice(1, -1));
+//       return isPalindrome(str.slice(1, -1));
+//     }
+//   }
+// }
+// console.log(isPalindrome("abccba"));
+
+// // PERSON CLASS WITH GET AND SET METHODS
+
+console.log("PERSON CLASS WITH GET AND SET METHODS");
+// explain the flow
+class Person {
+  constructor(name, age, email) {
+    this.name = name; // this refers to class name??
+    this.age = age; // here two ages are different??
+    this.email = email;
+  }
+
+  getName() {
+    return this.name; // why return, cant we put console.log?
+  }
+
+  setName(name) {
+    this.name = name;
+  }
+
+  getAge() {
+    return this.age;
+  }
+
+  setAge(age) {
+    return (this.age = age);
+  }
+
+  getEmail() {
+    return this.email;
+  }
+
+  setEmail(email) {
+    this.email = email;
+  }
+
+  displayDetails() {
+    console.log(`Name: ${this.name}`); // what is "`"?
+    console.log(`Age: ${this.age}`);
+    console.log(`Email:` + person.email); // use of ${} ?
+  }
 }
 
-// recursive
+// Example usage
+const person = new Person("John Doe", 25, "john@example.com");
+person.displayDetails();
+person.setName("Quin Doe");
+console.log("setage is:" + person.setAge(70)); // why setname output doesnt work
+// can class also access the variables directly without accessing the methods?
 
-function mergeSort(array){
-  if(array.length<=1){
-    return array;
-  }
+// // PRODUCT CLASS WITH NAME, PRICE AND QUANTITY, METHOD TO CALCULATE TOTAL PRICE AND UPDATE QUANTITY OF A PRODUCT
 
-  const middleIndex = Math.floor(array.length/2);
-  const leftArray = array.slice(0,middleIndex);
-  const rightArray = array.slice(middleIndex);
+// class Product{
 
-  return merge{
-    mergeSort(leftArray);
-    mergeSort(rightArray);
+//   constructor(name, price, quantity){   // here we can include non static items also??
+//     this.name = name;
+//     this.price = price;
+//     this.quantity = quantity;
+//   }
 
-  }
+//   getToalPrice(){
+//     return this.price * this.quantity
+//   }
 
+//   const product1 = new Product('apple', 30, 10);
+//   const product2 = new Product('banana', 20, 20);
+//   console.log(product1.getToalPrice());
+//   console.log(product2.getToalPrice());
+
+// }
+
+// class Product {
+//   constructor(name, price, quantity, quantityPicked) {
+//   this.name = name;
+//   this.price = price;
+//   this.quantity = quantity;
+//   this.quantityPicked = quantityPicked;
+//   }
+
+//   getTotalValue() {
+//   return this.price * this.quantity;
+//   }
+
+//   quantitypick(){ // cant we define this without mentioning in constructor and creating seperate method for this
+//     if(this.quantity > this.quantityPicked)
+//     return this.quantityPicked
+//    }
+
+//   productLeft(){
+//     if(this.quantity > this.quantityPicked)
+//     return this.quantity - this.quantityPicked
+//   }
+
+//   }
+//   // Example usage
+//   const product1 = new Product('Apple', 0.5, 10, 4);
+//   const product2 = new Product('Banana', 0.3, 15, 10);
+//   console.log(product1.getTotalValue());
+//   console.log("product1 left is:" +product1.productLeft());
+
+//   console.log(product2.getTotalValue());
+//   console.log("product2 left is:" +product2.productLeft());
+
+//     // Create a `SocialNetwork` class that manages user profiles. Implement methods to add friends, remove friends, and display a user's friend list.
+// // add, remove, display friend list
+
+// console.log("social network, implement methods for remove, add friend and display user friend list")
+
+//     class User{
+
+//       //friendList =[];
+//       constructor(name1){  // name1 must be same, name 1 is assign
+//         this.name = name1;
+//         this.friendList =[]; // friendlist scope defined in constructor is having scope throughout class even inside method in the class
+//       }
+
+//     //friendList =[]; // inside class dont use let as its automatically defined
+//       addFriend(addname){  // inside functions we use let to declare variables
+//         this.friendList.push(addname);
+//         return this.friendList;
+//         }
+
+//        //finalList = [];
+//       removeFriend(removeName){
+//         let finalList = []; // final list created inside method in a class is having scope only within the method
+//         for(let i=0; i<this.friendList.length; i++){
+//           if(this.friendList[i] !== removeName){
+//             finalList.push(this.friendList[i]);
+//           }
+//         }
+//         console.log(finalList)
+//         return finalList;
+//       }
+
+//       FriendList() {
+//         console.log("the friend list is: " +finalList);
+//       }
+//     }
+
+// const friend1 = new User();  // one user
+
+// console.log(friend1.addFriend("manish"));
+// console.log(friend1.addFriend("chintan"));
+// console.log(friend1.addFriend("deepak"));
+// //friend1.removeFriend("chintan");
+// console.log("result after removing friend is: " +friend1.removeFriend("chintan"));
+
+// // // Implement a `Restaurant` class with properties like name, cuisine type, and rating. Create
+// // //methods to add and remove menu items, calculate the average rating, and display the
+// // //restaurant details.
+// console.log("restaurant class with properties name etc and remove menu items, add etc");
+// class Restaurant {
+//    constructor(name,cussineType,rating){
+//     this.name = name;
+//     this.cussineType = cussineType;
+//     this.rating = rating
+//     //this.itemList = [];
+//     }
+
+// itemList = [];
+// addMenuItems(items){
+//   this.itemList.push(items);
+// return this.itemList;
+// }
+
+//  removeMenuItems(items){
+//   let removedList=[]
+//   for(let i=0; i<this.itemList.length; i++){
+
+//   if(this.itemList[i] !== items){
+//   removedList.push(this.itemList[i]);
+
+//   }
+//   }
+//   return removedList;
+// }
+
+// avgRating(ratings){
+//   let sum = 0;
+//   for(let i=0; i<ratings.length; i++){
+// sum += ratings[i];
+//   }
+//   let avg = sum/ratings.length;
+// return avg;
+//   }
+
+// }
+
+// const restaurant1 = new Restaurant("Malabar", "Nonveg", 4.5)
+// restaurant1.addMenuItems("gobi");
+// restaurant1.addMenuItems("chilli");
+// restaurant1.addMenuItems("panner");
+// console.log("after adding items, the total list of items are: " +restaurant1.addMenuItems());
+
+// console.log("after removing item " +restaurant1.removeMenuItems("chilli"));
+
+// console.log(restaurant1.avgRating([3,5,3.5,2.8,4.7]));
+
+// js iterables
+// console.log("js iterables");
+// const name = "W3Schools";
+// // List all Elements
+// let text = "";
+// for (const x of name) {
+//   text += x;
+// }
+// console.log(text);  // what is the change after giving the output after iterating?
+// console.log("type is: " +typeof(text));
+
+// home made iterables
+
+// // Home Made Iterable
+// function myNumbers() {
+//   let n = 0;
+//   return {
+//     next: function() {
+//       n += 10;
+//       return {value:n, done:false};
+//     }
+//   };
+// }
+
+// // Create Iterable
+// const n = myNumbers();
+// n.next(); // Returns 10
+// n.next(); // Returns 20
+// n.next(); // Returns 30
+
+// // SYMBOL.ITERATOR
+
+// //Create an Object
+// myNumbers = {};
+
+// // Create an Object
+// myNumbers = {};
+
+// // Make it Iterable//
+// myNumbers[Symbol.iterator] = function() {
+//   let n = 0;
+//   done = false;
+//   return {
+//     next() {
+//       n += 10;
+//       if (n == 100) {done = true}
+//       return {value:n, done:done};
+//     }
+//   };
+// }
+
+// // CALLING SYMBOL,ITERATOR MANUALLY
+
+// // Create an Object
+// myNumbers = {};
+
+// // Make it Iterable
+// myNumbers[Symbol.iterator] = function() {
+//   let n = 0;
+//   done = false;
+//   return {
+//     next() {
+//       n += 10;
+//       if (n == 100) {done = true}
+//       return {value:n, done:done};
+//     }
+//   };
+// }
+
+// // Create an Iterator
+// let iterator = myNumbers[Symbol.iterator]();
+
+// let text = ""
+// while (true) {
+//   const result = iterator.next();
+//   if (result.done) break;
+//   text += result.value +"<br>";
+// }
+
+// // PROJECT1: `Book` class with properties like `title`, `author`, `price`, and `quantity`. The class
+// //should have methods to get and set the book properties.
+
+// class BookStore {
+//   constructor(BookStorename) {
+//     this.bookStoreName = BookStorename;
+//     this.books = []; // chnage into object, key: book title, value: object
+//   }
+
+//   booksUpdateDetails(title, author, price, quantity) {
+//     title = title;
+//     author = author;
+//     price = price;
+//     quantity = quantity;
+
+//     return (title,author,price,quantity);
+//   }
+
+//   booksAdd(title, author, price, quantity) {
+//     title = title;
+//     author = author;
+//     price = price;
+//     quantity = quantity;
+
+//     const bookname = new Book(title, author, price, quantity);
+//     //this.books.push(books);
+//     //this.books.push(booksAdd(title, author, price,quantity))
+//     this.books.push(bookname);
+//     console.log("the books after adding 2 books is" +this.books);
+//     return this.books;
+//   }
+
+//  // this.books.push(booksAdd(title, author, price))
+//  // why outside method variables cant do operation?
+  
+//   removeBook(title) {
+//     // HOW TO MATCH only title here, as book has 3 properties?
+//     let booksAfterRemoval = [];
+//     for (let i = 0; i < this.books.length; i++) {
+//       if (this.books[i].title !== title) {
+//         booksAfterRemoval.push(this.books[i].title);
+        
+//       }
+//     }
+//     return booksAfterRemoval;
+//   }
+
+  
+// searchBookstitle(title) {
+// for(let i=0; i<this.books.length; i++){
+//   if(this.books[i].title === title) {
+//     console.log(this.books[i])
+//   }
+// }
+//   }
+
+//   searchBooksAuthor(author) {
+//     for(let i=0; i<this.books.length; i++){  //searching books by length of book
+//       if(this.books[i].author === author) {  //(object created in class book inside method of class bookstore is saved as object in the string book)
+//         console.log(this.books[i].title) // in the book[i] i.e, the object, books[i].title means the title declared in the object book, this is method of accessing
+//         return this.books[i].title  //first search by this.books[i].author, when we get that display the book title using this this.books[i].title
+//       }
+//     }
+//   }
+
+//   searchBooksPriceRange(priceStart,priceEnd) {
+//     let searchbookslist = "";
+//     for(let i=0; i<this.books.length; i++){
+//       if(this.books[i].price>=priceStart && this.books[i].price<=priceEnd) {
+//         searchbookslist += this.books[i].title + " "
+//         console.log(searchbookslist);
+//       }
+//     }
+//     return searchbookslist;
+//   }  
+// }
+
+// // function to find total price of a book (quantity wise)
+
+// // this is class Book
+
+//  class Book {
+//   constructor(title, author, price, quantity) {
+//     this.title = title;
+//     this.author = author;
+//     this.price = price;
+//     this.quantity = quantity;
+//   }
+
+//   getTitle() {
+//     return this.title;
+//   }
+
+//   setTitle(title) {
+//     return (this.title = title);
+//   }
+
+//   getAuthor() {
+//     return this.author;
+//   }
+
+//   setAuthor(author) {
+//     return (this.author = author);
+//   }
+
+//   getPrice() {
+//     return this.price;
+//   }
+
+//   setPrice(price) {
+//     return (this.price = price);
+//   }
+
+//   getQuantity() {
+//     return this.quantity;
+//   }
+
+//   setQuantity(quantity) {
+//     return (this.quantity = quantity);
+//   }
+// }
+
+// const bookStore1 = new BookStore("Library");
+// //console.log("the added book is" +bookStore1.booksAdd("Maths", "Einstein", 300, 50));
+
+// let result = bookStore1.booksAdd("universe", "einstein", 100, 50);
+// bookStore1.booksAdd("childStory", "mr.sawan",500, 100);
+// bookStore1.booksAdd("Biology", "Dr.Khan",400, 900);
+
+// bookStore1.searchBookstitle("universe");
+
+// console.log("the books in rane 100-400 are: " +bookStore1.searchBooksPriceRange(100,400));
+// console.log("the books with author search is are: " +bookStore1.searchBooksAuthor("Dr.Khan"));
+// console.log("book remained after removind title are: " +bookStore1.removeBook("childStory")); 
+
+// 2ND APPROACH
+// class BookStore {
+//   constructor(BookStorename) {
+//     this.bookStoreName = BookStorename;
+//     this.books = {}; // chnage into object, key: book title, value: object
+//   }
+
+//   booksUpdateDetails(title, author, price, quantity) {
+//     title = title;
+//     author = author;
+//     price = price;
+//     quantity = quantity;
+
+//     return (title,author,price,quantity);
+//   }
+
+//   booksAdd(title, author, price, quantity) {
+//     title = title;
+//     author = author;
+//     price = price;
+//     quantity = quantity;
+
+//     const bookname = new Book(title, author, price, quantity);
+//     //this.books.push(books);
+//     //this.books.push(booksAdd(title, author, price,quantity))
+//     this.books = bookname;
+//     console.log("the books after adding 2 books is" +this.books);
+//     return this.books;
+//   }
+
+//  // this.books.push(booksAdd(title, author, price))
+//  // why outside method variables cant do operation?
+  
+//   removeBook(title) {
+//     // HOW TO MATCH only title here, as book has 3 properties?
+//     let booksAfterRemoval = [];
+//     for (let i = 0; i < this.books.length; i++) {
+//       if (this.books[i].title !== title) {
+//         booksAfterRemoval = this.books[i].title
+//         console.log("booksAfterRemoval is: " +booksAfterRemoval)
+//       }
+//     }
+//     for(const x of this.books){
+//       console.log("x value is: " +x)
+//     }
+//     return booksAfterRemoval;
+//   }
+
+  
+// searchBookstitle(title) {
+// for(let i=0; i<this.books.length; i++){
+//   if(this.books[i].title === title) {
+//     console.log(this.books[i])
+//   }
+// }
+//   }
+
+//   searchBooksAuthor(author) {
+//     for(let i=0; i<this.books.length; i++){  //searching books by length of book
+//       if(this.books[i].author === author) {  //(object created in class book inside method of class bookstore is saved as object in the string book)
+//         console.log(this.books[i].title) // in the book[i] i.e, the object, books[i].title means the title declared in the object book, this is method of accessing
+//         return this.books[i].title  //first search by this.books[i].author, when we get that display the book title using this this.books[i].title
+//       }
+//     }
+//   }
+
+//   searchBooksPriceRange(priceStart,priceEnd) {
+//     let searchbookslist = "";
+//     for(let i=0; i<this.books.length; i++){
+//       if(this.books[i].price>=priceStart && this.books[i].price<=priceEnd) {
+//         searchbookslist += this.books[i].title + " "
+//         console.log(searchbookslist);
+//       }
+//     }
+//     return searchbookslist;
+//   }  
+// }
+
+// // function to find total price of a book (quantity wise)
+
+// // this is class Book
+
+//  class Book {
+//   constructor(title, author, price, quantity) {
+//     this.title = title;
+//     this.author = author;
+//     this.price = price;
+//     this.quantity = quantity;
+//   }
+
+//   getTitle() {
+//     return this.title;
+//   }
+
+//   setTitle(title) {
+//     return (this.title = title);
+//   }
+
+//   getAuthor() {
+//     return this.author;
+//   }
+
+//   setAuthor(author) {
+//     return (this.author = author);
+//   }
+
+//   getPrice() {
+//     return this.price;
+//   }
+
+//   setPrice(price) {
+//     return (this.price = price);
+//   }
+
+//   getQuantity() {
+//     return this.quantity;
+//   }
+
+//   setQuantity(quantity) {
+//     return (this.quantity = quantity);
+//   }
+// }
+
+// const bookStore1 = new BookStore("Library");
+// //console.log("the added book is" +bookStore1.booksAdd("Maths", "Einstein", 300, 50));
+
+// let result = bookStore1.booksAdd("universe", "einstein", 100, 50);
+// bookStore1.booksAdd("childStory", "mr.sawan",500, 100);
+// bookStore1.booksAdd("Biology", "Dr.Khan",400, 900);
+
+// bookStore1.searchBookstitle("universe");
+
+// console.log("the books in rane 100-400 are: " +bookStore1.searchBooksPriceRange(100,400));
+// console.log("the books with author search is are: " +bookStore1.searchBooksAuthor("Dr.Khan"));
+// console.log("book remained after removind title are: " +bookStore1.removeBook("childStory")); 
+
+let array = [];
+let string = "hello there"
+
+// let newstr = Array(string);
+// console.log(newstr);
+// for(i=0; i<newstr.length; i++){
+//   console.log(newstr[i])
+// }
+
+// convert string into arrays
+let temp = "";
+let newstr = []
+for(i=0; i<string.length; i++){
+  if(string[i]!== " "){
+    temp += (string[i])
 }
-console.log(mergeSort([6,4,8,2,1,345,123,43,68]))
+else{
+  newstr.push(temp);
+  console.log("after pushing newstr is: " +newstr)
+  temp = [];
+}
+}
+newstr.push(temp);
+console.log("final string is " +newstr);
+
+// to convert a string to number
+
+let numstr = "1723"
+// numstr = parseInt("1723");
+// console.log("typr after parseont operation"+typeof numstr);
+console.log("parseint" +parseInt("1723"));
+console.log(numstr/10);  // string can be divided
+console.log(typeof numstr);
+let num = 0; 
+num = numstr; // after assigning str to number, the numb transfered from string remains str only
+console.log(num/10); // when string transfered to num variable declared as number, the number variable also changes its type to string 
+console.log(typeof num);
+
+let numarr = [];  // the number 1723 is not read number by number. but words are read and pushed letter by letter
+for(i=0; i<1; i++){
+numarr.push(numstr)
+}
+console.log(numarr);
 
 
+console.log("after split method" +numstr.split("  ")); // why 1723 string doesnt get split by gap?
 
