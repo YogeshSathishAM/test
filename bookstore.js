@@ -134,36 +134,36 @@
 // console.log("book remained after removind title are: " +bookStore1.removeBook("childStory")); 
 
 
-function validateInput(input) {
-  if (input.length < 8) {
-throw new Error("input not 8 characters")
-}
+// function validateInput(input) {
+//   if (input.length < 8) {
+// throw new Error("input not 8 characters")
+// }
   
-else{
-return false  
-}
-}
-  try {
-  const userInput = 'examp';
-  validateInput(userInput)
+// else{
+// return false  
+// }
+// }
+//   try {
+//   const userInput = 'examp';
+//   validateInput(userInput)
   
-  } catch (error) {
-  console.error(error);   // console.log? and why error.length?
-  }
+//   } catch (error) {
+//   console.error(error);   // console.log? 
+//   }
 
   function validateInput(input) {
-    if (input.length < 8) {
+    if (input.length < 8) {  // in any statements other than try catch throw must be used so that error message can be printed when detected
     throw new Error('Input must be at least 8 characters long.');
     }
     else{
       console.log('hgfcug')
     }
     }
-
-
-    try {
-    const userInput = 'example';
-    validateInput(userInput);
+// function called insid try catch and error detected is thrown by throw keyword
+// inside function and caught by catch(error)
+    try {  // in try catch we dont use throw as try catch has inbuilt method to throw error when detected
+    const userInput = 'examplekk'; 
+    validateInput(userInput); 
     } catch (error) {
     console.error(error.message);
     }
