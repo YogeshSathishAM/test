@@ -3,46 +3,41 @@ async function longitLatit() {
   try {
     const reponse = await fetch("https://geocode.maps.co/search?q=Singapore");
     data = await reponse.json();
-    console.log(data); // getting bulk data, containing 10 objects in array
-  } catch {
-    console.log(data);
+   // console.log(data); // getting bulk data, containing 10 objects in array
+  } catch(error) {
+    console.log(error);
   }
 
   let latitude = 0,
     longitude = 0;
   let place = {};
   for (i = 0; i < 1; i++) {
-    console.log(data[i]); // targeting the first object in the array
+    //console.log(data[i]); // targeting the first object in the array
     place = data[i]; // assignr that object to place
   }
   //formatting............
   //-----------------------------------------jhv,jdmytdmytdu-------------------------//
 
-  console.log(typeof place.lat); // accessing the latitude in the object
+  //console.log(typeof place.lat); // accessing the latitude in the object
   latitude = place.lat; // how to convert latitude which is in string format into numbers?
   latitude = Number(latitude); // Number (""), this converts a string of digits into a number type
-  console.log("type of latitude after numb operation is" + typeof latitude);
-  console.log(
-    "after placing the value first latitude is " +
-      latitude +
-      "type of is" +
-      typeof latitude
-  );
+  //console.log("type of latitude after numb operation is" + typeof latitude);
+  
   latitude = latitude.toFixed(2);
   longitude = place.lon;
   longitude = Number(longitude);
   longitude = longitude.toFixed(2);
-  console.log(latitude, longitude);
+  //console.log(latitude, longitude);
   //--------------------------------end --------------------//
   return [latitude, longitude];
 }
-console.log("after returning" + longitLatit());
+
 
 async function addCoordinatesToUrl() {
   let coordinates = [];
   coordinates = await longitLatit(); // using await here as we are calling a asynchronus function, without await, we get error, we get only promise, asynch returns promise, to get value use await
 
-  console.log("coordinates after assigning are " + coordinates);
+ 
   let latitude = coordinates[0]; // the values returned must be derived in this function and then it can be used in this function
   let longitude = coordinates[1]; // without for loop, arrays can be derived directly using index, used for very small arrays
 
@@ -55,12 +50,11 @@ async function addCoordinatesToUrl() {
     "&longitude=" +
     longitude +
     "&hourly=temperature_2m,rain,cloudcover&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=auto&forecast_days=3";
-  console.log(Url);
+  
   let data = await fetch(Url);
   data = await data.json();
   //console.log("the data is" + JSON.stringify(data)); // this is to convert the data from objects into strings if we want to print any message in console.log along with object display
-  console.log("the data of the coordibnates are:");
-  console.log(data);
+  
 
   // to derive the weather factors from data variable
 
@@ -94,21 +88,21 @@ async function addCoordinatesToUrl() {
 
   return data;
 }
-addCoordinatesToUrl();
+
 
 // function to predict the weatherof current day
 
-function currentDayWeather(day) {
-  let data = addCoordinatesToUrl();
-  let day = day;
-
+async function currentDayWeather(day1) {
+  let data =await addCoordinatesToUrl();
+  let day = day1;
+console.log("data.hourly",await data.hourly)
   //accessing the cloud rain and temp data
-  let cloudCover = data.hourly.cloudcover; // accessing cloudcover having 72 hours data
+  let cloudCover =  data.hourly.cloudcover; // accessing cloudcover having 72 hours data
   let rainData = data.hourly.rain;
   let tempData = data.hourly.temperature_2m;
   let avgcloudCover = 0,
     avgrainData = 0,
-    avgtempData = 0; //start,end
+    avgtempData = 0; 
   let start = 0,
     end = 0; // the limits declared for "for" loops on different days
 
@@ -140,12 +134,31 @@ function currentDayWeather(day) {
     avgtempData = sum / 24;
   }
 
-  //************compare the values after calculating the average in aboive for loops****************
-if (avgcloudCover > avgtempData && avgtempData > avgrainData) {
-    console.log("it is raining ");
-  } else {
+//************compare the values after calculating the average in aboive for loops****************
+
+  
+if(avgrainData>avgcloudCover){
+  if(avgrainData>avgtempData){
+    console.log("it rains")
+  }
+  else{
+    console.log("it doesnt rain");
+  }
+}
+
+else if(avgcloudCover>avgrainData){
+  if(avgcloudCover > avgtempData){
+    console.log("its raining")
+  }
+  else{
     console.log("its not raining");
   }
+}
+
+  // try these below instaed of above
+  //if rain > cloud - nested(if-else), co pare temp
+    //else if cloudy > rain - nested(if-else), compare temp
+     
   //**********************weather prediction calculation ends***********************
 }
 currentDayWeather(2);  // passing value for predicting the weather for next day 

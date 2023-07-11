@@ -244,11 +244,11 @@
 
 // // ARRAY FUNCTIONS- FIND ELEMENT IN AN ARRAY
 // console.log("my method, find element in array");
-// /*function arraysearch(arr, element) {
+// function arraysearch(arr, element) {
 //   for(let i=0; i<=arr.length; i++)
 //   if(a[i] === element)
 //   console.log("element found in array");
-// } */
+// } 
 
 // console.log("pdf method, find element in array");
 
@@ -537,7 +537,7 @@
 // Factorial(5);
 // console.log(fact);
 
-// FUNCTION TO DO BINARY SEARCH
+// //FUNCTION TO DO BINARY SEARCH
 
 // function binarySearch(arr) {
 
@@ -560,9 +560,9 @@
 
 //   }
 // }
-// binarysearch([2,4,6,7,10,13,15,21,27,33], 33);
+// binarySearch([2,4,6,7,10,13,15,21,27,33], 33);
 
-// MATRIX MULTIPLICATION
+// //MATRIX MULTIPLICATION
 // console.log("matrix multiplication");
 
 // function matrixMultiplication(mat1,mat2) {
@@ -597,7 +597,7 @@
 //   [11, 12]
 // ]);
 
-// ADDITION OF MATRICES
+// //ADDITION OF MATRICES
 // console.log("addition of matrices");
 // function addMatrices(matrix1, matrix2) {
 //   const sumMatrix = [];
@@ -614,7 +614,7 @@
 //   const sumMatrix = addMatrices(matrix1, matrix2);
 //   console.log("sum of matrix" +sumMatrix);
 
-// MULTIPLICATION OF MATRIX BY A SCALAR
+// //MULTIPLICATION OF MATRIX BY A SCALAR
 
 // console.log("matrix multiplication");
 //   function multiplyMatrixByScalar(matrix, scalar) {
@@ -631,7 +631,7 @@
 //     const scalar = 2;const productMatrix = multiplyMatrixByScalar(matrix, scalar);
 //     console.log(productMatrix);
 
-// MINIMUM ELEMENT IN EACH ROW OF MATRIX
+// //MINIMUM ELEMENT IN EACH ROW OF MATRIX
 // console.log("minimum in each row");
 //     function findMinInEachRow(matrix) {
 //       const minValues = [];
@@ -650,7 +650,7 @@
 //       const minValues = findMinInEachRow(matrix);
 //       console.log(minValues);
 
-// MAXIMUM ELEMENT IN EACH ROW OF MATRIX
+// //MAXIMUM ELEMENT IN EACH ROW OF MATRIX
 
 // console.log("maximum in each row");
 //       function findMaxElement(matrix) {
@@ -670,10 +670,10 @@
 //         const matrix = [[1, 2, 3,4,5], [4, 5, 6,7,8], [7, 8, 9,8,10]];
 //         const max = findMaxElement(matrix);
 //         console.log(max);
-// as per this rogram, the column length in number is 5 and the row in number is 3
-// so matrix.length gives row length and matrix[i].length gives column length
+// //as per this rogram, the column length in number is 5 and the row in number is 3
+// //so matrix.length gives row length and matrix[i].length gives column length
 
-// MAXIMUM MULTIPLICATION OF 2 MATRICES
+// //MAXIMUM MULTIPLICATION OF 2 MATRICES
 //   console.log("matrix multiplication");
 // function multiplyMatrices(matrix1, matrix2) {
 //   const productMatrix = [];
@@ -694,7 +694,7 @@
 //   const productMatrix = multiplyMatrices(matrix1, matrix2);
 //   console.log(productMatrix);
 
-//FINDING AVERAGE OF A MATRIX ROW
+// //FINDING AVERAGE OF A MATRIX ROW
 // console.log("FINDING SUM OF ALL ELEMENTS IN A MATRIX ROW, SELF TRIED")
 //           function averageMatrixrow(matrix) {
 
@@ -711,7 +711,7 @@
 //           }
 //           averageMatrixrow([[1,2,3],[2,4,5],[3,5,6]]);
 
-//FINDING AVERAGE OF EACH OF MATRIX ROW
+// //FINDING AVERAGE OF EACH OF MATRIX ROW
 // console.log("FINDING AVERAGE OF EACH OF MATRIX ROW");
 
 // function averageMatrixrow(matrix) {
@@ -1183,11 +1183,12 @@ class Person {
   }
 
   getName() {
-    return this.name; // why return, cant we put console.log?
+    return this.name; // why return, cant we put console.log?, this is because we can directly get the name when calling the getname method inside console.log, other way also works
   }
 
   setName(name) {
     this.name = name;
+    return this.name
   }
 
   getAge() {
@@ -1217,7 +1218,7 @@ class Person {
 const person = new Person("John Doe", 25, "john@example.com");
 person.displayDetails();
 person.setName("Quin Doe");
-console.log("setage is:" + person.setAge(70)); // why setname output doesnt work
+console.log("setname is:" + person.setName("osama")); // why setname output doesnt work? because return keyword wasnt used
 // can class also access the variables directly without accessing the methods?
 
 // // PRODUCT CLASS WITH NAME, PRICE AND QUANTITY, METHOD TO CALCULATE TOTAL PRICE AND UPDATE QUANTITY OF A PRODUCT
@@ -1766,47 +1767,60 @@ console.log(numarr);
 console.log("after split method" +numstr.split("  ")); // why 1723 string doesnt get split by gap?
 
 
-// Pattern Printing
+// Pattern Printing- printing diamond
+console.log("diamond first half print")
+for (let i = 1; i <= 5; i++) {  
+  let row = ''; 
+  for (let j = 1; j <= 5 - i; j++) {
+  row += ' ';
+  }
+  for (let k = 1; k <= i * 2 - 1; k++) { // where does k start from?
+  row += '*';
+  }
+  console.log(row);
+  }
 
-// for (let i = 1; i <= 5; i++) {  
-//   let row = ''; 
-//   for (let j = 1; j <= 5 - i; j++) {
-//   row += ' ';
-//   }
-//   for (let k = 1; k <= i * 2 - 1; k++) { // where does k start from?
+  //console.log("diamond 2nd half print");
+  for (let i = 4; i >= 1; i--) { // for 2nd half diamond, we start from i=4 and not i=1, so that it becomes easy to evaluate the limit value of k which is required to print * value
+    let row = '';                // the value i=4 just points next line to the previous line where 9 stars were printed, in next line 7 stars are printed
+    for (let j = 1; j <= 5 - i; j++) {
+    row += ' ';
+    }
+    for (let k = 1; k <= i * 2 - 1; k++) { 
+    row += '*';
+    }
+    console.log(row);
+    }
+
+// reverse print
+
+// console.log("reverse, my method");  // other method, other than given in pdf
+// for (let i = 1; i <= 5; i++) {
+// let row = '';
+// for (let j = i; j <= 5; j++) {
+// row += '*';
+// }
+// console.log(row);
+// }
+
+// console.log("reverse, pdf method"); // pdf method
+// for(let i = 5; i >= 1; i--) {
+//   let row = '';
+//   for (let j = 1; j <= i; j++) {
 //   row += '*';
 //   }
 //   console.log(row);
 //   }
 
-  
-  // for (let i = 4; i >= 1; i--) {  // where does i and j start from?
-  // let row = '';
-  // for (let j = 1; j <= 5 - i; j++) {
-  // row += ' ';
-  // }
-  // for (let k = 1; k <= i * 2 - 1; k++) {
-  // row += '*';
-  // }
-  // console.log(row);
-  // }
+console.log("array operations")
+let array1 = ["ab","rhc",'rjcr',68, "ih4c"]
+// to access larger array we use for loop, sorting etc. but, if we want to access elements of smaller array like above example, provided we know the target point, we can simply use the index values to access
+console.log(array1[0]); // numbers can also be stroed in the array without ""
+console.log(array1[3]);
 
-// reverse print
+let newarr = [];
+console.log("newarray length is" +newarr.length);
+//newarr.push(array1[3],array1[0]);
+console.log(newarr);
+// multiple array elements can be pushed into new array using the push method by writing the multiple elements inside the () of push
 
-console.log("reverse1");  // other method, other than given in pdf
-for (let i = 1; i <= 5; i++) {
-let row = '';
-for (let j = i; j <= 5; j++) {
-row += '*';
-}
-console.log(row);
-}
-
-console.log("reverse2"); // pdf method
-for(let i = 5; i >= 1; i--) {
-  let row = '';
-  for (let j = 1; j <= i; j++) {
-  row += '*';
-  }
-  console.log(row);
-  }
