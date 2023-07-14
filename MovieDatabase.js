@@ -1,26 +1,32 @@
+//encapsulated the fetching part inside a function so that fetched data can be assigned to "data" variable
+const fetchData = async () => {
+
+  const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YmMwMzU5MmI3ZjRkZmI2NmU4YzY4MWUyZGZlZDlkNiIsInN1YiI6IjY0YWVhNmU3NjZhMGQzMDBhZGVhNzQ2OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.szNJSoo3BBjKSyr-CUTbTZhCGwi-KDC55OFItuVxwS4'
+    }
+  };
 
 
+  let data = await fetch(url, options)
+  data = await data.json()
+  console.log("data result");
+  console.log(data);
+  //return the data object from the fetch result to the calling function
+  return data
 
-const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
-const options = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YmMwMzU5MmI3ZjRkZmI2NmU4YzY4MWUyZGZlZDlkNiIsInN1YiI6IjY0YWVhNmU3NjZhMGQzMDBhZGVhNzQ2OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.szNJSoo3BBjKSyr-CUTbTZhCGwi-KDC55OFItuVxwS4'
-  }
-};
+}
+// convert below function to async
+async function searchMovies(){
+  let data1 = {}; 
+  // await for the data to be fetched and assigning is complete
+   data1 =await fetchData()
+  console.log("data1",data1);
+}
 
-
-let data = fetch(url, options).then(res => res.json()).then(json => console.log(json)).catch(err => console.error('error:' + err));
-console.log("data result");
-console.log(data);
-
-
-function searchMovies(){
-  let data1 = {};
-   data1 = data;
-  console.log(data1);
- }
  searchMovies();
 
   
